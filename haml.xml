@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="haml">
+  <snippet>
+    <text><![CDATA[- content_for :${1:content_id} do
+	${0}]]></text>
+    <tag>cf</tag>
+    <description>content_for</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= link_to ${1:name}, ${2:some_url}]]></text>
+    <tag>lt</tag>
+    <description>link_to</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[- form_for ${1:record_name} do |${2:form}|
+	${0}]]></text>
+    <tag>ff</tag>
+    <description>form_for</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= ${1:form}.label :${2:method}]]></text>
+    <tag>lb</tag>
+    <description>label</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= ${1:form}.password_field :${2:method}]]></text>
+    <tag>pf</tag>
+    <description>password_field</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= submit_tag "${1:Submit}"]]></text>
+    <tag>st</tag>
+    <description>submit_tag</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= stylesheet_link_tag "${1:style_sheet_file_name}"]]></text>
+    <tag>slt</tag>
+    <description>stylesheet_link_tag</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= error_messages_for '${1:object_name}']]></text>
+    <tag>emf</tag>
+    <description>error_messages_for</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[:${1:key_name} => ${2:value}]]></text>
+    <tag>:</tag>
+    <description>hash pair</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[- form_tag ${1:url} do
+	${0}]]></text>
+    <tag>ft</tag>
+    <description>form_tag</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= label_tag ${1:name}]]></text>
+    <tag>lbt</tag>
+    <description>label_tag</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= text_field_tag :${1:name}]]></text>
+    <tag>tft</tag>
+    <description>text_field_tag</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[%p
+  = ${1:form}.label :${2:method}
+  %br
+  = ${1}.text_field :${2}
+  = ${1}.error_message_on :${2}]]></text>
+    <tag>fld</tag>
+    <description>field</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[- shadowbox "${1:id}" do
+	${0}]]></text>
+    <tag>sb</tag>
+    <description>shadowbox</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= render ${1:record}]]></text>
+    <tag>rp</tag>
+    <description>render partial</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[- for ${1:object_name} in ${2:collection_name} do
+	${0}]]></text>
+    <tag>for</tag>
+    <description>for</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[- content_tag_for(:${1:tag_name}, ${2:record}) do
+	${0}]]></text>
+    <tag>ctf</tag>
+    <description>content_tag_for</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[- div_for(${1:record}) do
+	${0}]]></text>
+    <tag>df</tag>
+    <description>div_for</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[- unless ${1:condition}
+	${0}]]></text>
+    <tag>un</tag>
+    <description>unless</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[- else
+	${0}]]></text>
+    <tag>el</tag>
+    <description>else</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[- if ${1:condition}
+	${0}]]></text>
+    <tag>if</tag>
+    <description>if</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= ${1:form}.error_message_on :${2:method}]]></text>
+    <tag>emo</tag>
+    <description>error_message_on</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= ${1:form}.text_field :${2:method}]]></text>
+    <tag>tf</tag>
+    <description>text_field</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[%br
+${0}]]></text>
+    <accelerator><![CDATA[<Shift><Alt>b]]></accelerator>
+    <description>%br</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[%p
+	${0}]]></text>
+    <accelerator><![CDATA[<Shift><Alt>p]]></accelerator>
+    <description>%p</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[%hr
+${0}]]></text>
+    <accelerator><![CDATA[<Shift><Alt>underscore]]></accelerator>
+    <description>%hr</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[%table
+	%tr
+		%td
+			${0}]]></text>
+    <tag>tbl</tag>
+    <description>%table</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[%tr
+	%td
+		${0}]]></text>
+    <tag>tr</tag>
+    <description>%tr</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[%${1:tag_name}]]></text>
+    <accelerator><![CDATA[<Shift><Alt>t]]></accelerator>
+    <description>%any_tag</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= check_box_tag "${1:name}"]]></text>
+    <tag>cbt</tag>
+    <description>check_box_tag</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[&nbsp;]]></text>
+    <accelerator><![CDATA[<Shift><Alt>space]]></accelerator>
+    <description>&amp;nbsp;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= ${1:form}.collection_select :${2:method}, ${3:collection}, :${4:value_method}, :${5:text_method}]]></text>
+    <tag>cs</tag>
+    <description>collection_select</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= link_to_function "${1:name}", "${2:alert('javascript_code')}"]]></text>
+    <tag>ltf</tag>
+    <description>link_to_function</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= javascript_include_tag ${1:sources}]]></text>
+    <tag>jit</tag>
+    <description>javascript_include_tag</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[%h1 ${1:Page Title}
+
+#sidebar
+    
+#page.sidebar
+  = user_feedback]]></text>
+    <tag>pgs</tag>
+    <description>page with sidebar</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[%h1 ${1:Page Title}
+
+#page
+  = user_feedback]]></text>
+    <tag>pg</tag>
+    <description>page</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= hidden_field_tag :${1:method_name}, ${2:value}]]></text>
+    <tag>hft</tag>
+    <description>hidden_field_tag</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[= ${1:form}.hidden_field :${2:method_name}]]></text>
+    <tag>hf</tag>
+    <description>hidden_field</description>
+  </snippet>
+</snippets>

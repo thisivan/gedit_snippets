@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="rhtml">
+  <snippet>
+    <text><![CDATA[<% ${0} -%>]]></text>
+    <tag>%</tag>
+    <description>Rails: &lt;% ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= ${0} %>]]></text>
+    <tag>=</tag>
+    <description>Rails: &lt;%= ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[&nbsp;${0}]]></text>
+    <accelerator><![CDATA[<Shift><Alt>space]]></accelerator>
+    <description>XHTML: &amp;nbsp;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<${1:tag_name}>${0}</${1}>]]></text>
+    <tag>&lt;</tag>
+    <description>XHTML: &lt;...&gt;&lt;/...&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= link_to_remote "${1:label}", ${2:url} %>${0}]]></text>
+    <tag>ltr</tag>
+    <description>Rials: &lt;%= link_to_remote ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<% end -%>
+${0}]]></text>
+    <tag>end</tag>
+    <description>Rails: &lt;% end %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<% if ${1:condition} -%>
+	${0}
+<% end -%>]]></text>
+    <tag>if</tag>
+    <description>Rails: &lt;% if ... %&gt; if</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<% unless ${1:condition} -%>
+	${0}
+<% end -%>]]></text>
+    <tag>unless</tag>
+    <description>Rails: &lt;% unless ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<% else -%>
+	${0}]]></text>
+    <tag>else</tag>
+    <description>Rails: &lt;% else %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<${1:tag_name} />]]></text>
+    <description>XHTML: &lt;... /&gt;</description>
+    <accelerator><![CDATA[<Shift><Alt>greater]]></accelerator>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<% for ${1:object} in ${2:@collection} -%>
+	${0}
+<% end -%>]]></text>
+    <tag>for</tag>
+    <description>Rails: &lt;% for ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <accelerator><![CDATA[<Shift><Alt>h]]></accelerator>
+    <description>XHTML: &lt;hr /&gt;</description>
+    <text><![CDATA[<hr />]]></text>
+  </snippet>
+  <snippet>
+    <accelerator><![CDATA[<Shift><Alt>l]]></accelerator>
+    <description>XHTML: &lt;br /&gt;</description>
+    <text><![CDATA[<br />${0}]]></text>
+    <tag>hbr</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[:${1:key} => ${2:value}]]></text>
+    <tag>:</tag>
+    <description>Rails: :key =&gt; value</description>
+    <accelerator><![CDATA[<Shift><Alt>colon]]></accelerator>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= render @${1:object_name} %>${0}]]></text>
+    <tag>rp</tag>
+    <description>Rails: &lt;%= render :partial ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<% form_for ${1:@object_name} do |form| %>
+	${0}
+<% end %>]]></text>
+    <tag>ff</tag>
+    <description>Rails: &lt;% form_for ... do |f| %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= observe_form ${1::form_id},
+    ${2:url},
+    :frequency => ${3:0.5},
+    :width => "${4:q}" -%>]]></text>
+    <tag>of</tag>
+    <description>Rails: &lt;%= observe_form ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= ${1:form}.text_field :${2:attribute_name} %>${0}]]></text>
+    <tag>tf</tag>
+    <description>Rails: &lt;%= form.text_field ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= ${1:form}.hidden_field :${2:attribute_name} %>${0}]]></text>
+    <tag>hf</tag>
+    <description>Rails: &lt;%= form.hidden_field ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= link_to_function "${1:text}", "${2:alert('Not jet implemented.')}" %>]]></text>
+    <tag>ltf</tag>
+    <description>Rails: &lt;%= link_to_function ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<optgroup label="${1:label}">
+	<option value="${2:value}">${3:text}</option>${0}
+</optgroup>]]></text>
+    <tag>optgroup</tag>
+    <description>Rails: &lt;optgroup ...&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<option value="${1:value}">${2:text}</option>
+${0}]]></text>
+    <tag>option</tag>
+    <description>Rails: &lt;option ...&gt;</description>
+  </snippet>
+  <snippet>
+    <tag>hat</tag>
+    <description>XHTML: attribute="value"</description>
+    <text><![CDATA[${1:attribute_name}="${2:value}"]]></text>
+    <accelerator><![CDATA[<Shift><Alt>a]]></accelerator>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= ${1:form}.label :${2:attribute_name} %>${0}]]></text>
+    <tag>lb</tag>
+    <description>Rails: &lt;% form.label %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<% content_for :${1:yield_name} do -%>
+	${0}
+<% end -%>]]></text>
+    <tag>cf</tag>
+    <description>Rails: &lt;% content_for ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<p>
+  <%= ${1:form}.label :${2:attribute_name} %><br />
+  <%= ${1}.text_field :${2} %>
+</p>${0}]]></text>
+    <tag>fld</tag>
+    <description>Custom Rails: field</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<% fields_for "${1:prefix}" do |${2:form}| -%>
+	${0}
+<% end -%>]]></text>
+    <tag>fdf</tag>
+    <description>Rails: &lt;% fields_for ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= submit_to_remote :${1:name}, "${2:label}", 
+	${3:url} %>${0}]]></text>
+    <tag>str</tag>
+    <description>Rails: &lt;%= submit_to_remote ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<table>
+	<tr>
+		<td>${0}</td>
+	</tr>
+</table>]]></text>
+    <tag>ht</tag>
+    <description>XHTML: &lt;table&gt;...&lt;/table&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<tr>
+	<td>${0}</td>
+</tr>]]></text>
+    <tag>htr</tag>
+    <description>XHTML: &lt;tr&gt;...&lt;/tr&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<td>${0}</td>]]></text>
+    <tag>htd</tag>
+    <description>XHTML: &lt;td&gt;...&lt;/td&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<style type="text/css" media="${1:screen}">
+	${0}
+</style>]]></text>
+    <tag>hstyle</tag>
+    <description>XTHML: &lt;style ...&gt;&lt;/style&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= label_tag :${1:name}, "${2:label}" %>${0}]]></text>
+    <tag>lbt</tag>
+    <description>Rails: &lt;%= label_tag ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= password_field_tag :${1:name} %>${0}]]></text>
+    <tag>pft</tag>
+    <description>Rails: &lt;%= password_field_tag ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= text_field_tag :${1:name} %>${0}]]></text>
+    <tag>tft</tag>
+    <description>Rails: &lt;%= text_field_tag ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= check_box_tag :${1:name} %>${0}]]></text>
+    <tag>cbt</tag>
+    <description>Rails: &lt;%= check_box_tag ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= submit_tag "${1:Submit}" %>${0}]]></text>
+    <tag>st</tag>
+    <description>Rails: &lt;% submit_tag ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<ul>
+	<li>${0}</li>
+</ul>]]></text>
+    <tag>hul</tag>
+    <description>XHTML: &lt;ul&gt;...&lt;/ul&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<ol>
+	<li>${0}</li>
+</ol>]]></text>
+    <tag>hol</tag>
+    <description>XHTML: &lt;ol&lt;...&lt;/ol&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<li>${0}</li>]]></text>
+    <tag>hli</tag>
+    <description>XHTML: &lt;li&gt;...&lt;/li&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= link_to "${1:text}", ${2:url} %>${0}]]></text>
+    <tag>lt</tag>
+    <description>Rails: &lt;%= link_to ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= form.collection_select :${1:attribute_name}, ${2:ClassName}.all, :id, :${4:description} %>${0}]]></text>
+    <tag>cs</tag>
+    <description>Rails: &lt;%= collection_select ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<strong>${0:$GEDIT_SELECTED_TEXT}</strong>]]></text>
+    <accelerator><![CDATA[<Shift><Alt>b]]></accelerator>
+    <tag>hb</tag>
+    <description>XHTML: &lt;strong&gt;...&lt;/strong&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<% shadowbox "${1:id}" do %>
+	${0}
+<% end %>]]></text>
+    <tag>sb</tag>
+    <description>Rails: &lt;% sidebar_section ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<th>${0}</th>]]></text>
+    <tag>hth</tag>
+    <description>XHTML: &lt;th&gt;...&lt;/th&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= error_messages_for :${1:object_name} %>${0}]]></text>
+    <tag>emf</tag>
+    <description>Rails: &lt;%= error_messages_for ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= content_tag(:${1:tag}, ${2:content}, :class => "${3:class_name}")${0} %>]]></text>
+    <tag>ct</tag>
+    <description>Rails: content_tag (...)</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<% content_tag_for(:${1:tag}, @${2:object}) do -%>
+	${0}
+<% end -%>
+]]></text>
+    <tag>ctfd</tag>
+    <description>Rails: content_tag_for ... do</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<% content_tag :${1:tag}, :class => "${2:class_name}" do -%>
+	${0}
+<% end -%>]]></text>
+    <tag>ctd</tag>
+    <description>Rails: content_tag ... do</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= stylesheet_link_tag "${1:file_name}", :media => :${2:all} %>${0}]]></text>
+    <tag>slt</tag>
+    <description>Rails: &lt;%= style_sheet_link_tag ... %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= auto_link ${1:text} %>${0}]]></text>
+    <tag>al</tag>
+    <description>Rails: &lt;%= auto_link ... %&gt;${0}</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= image_tag "${1:image}" %>]]></text>
+    <tag>it</tag>
+    <description>Rails: &lt;%= image_tag %&gt;</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<%= t("${0}") %>]]></text>
+    <tag>et</tag>
+    <description>Rails: &lt;%= t("") %&gt;</description>
+  </snippet>
+</snippets>

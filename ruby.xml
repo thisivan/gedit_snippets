@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="ruby">
+  <snippet>
+    <text><![CDATA[respond_to do |format|
+  format.${1:html}
+  format.xml  { head :ok }
+end]]></text>
+    <tag>rt</tag>
+    <description>Rails: respond_to ... do</description>
+  </snippet>
+  <snippet override="ruby-:">
+    <text><![CDATA[:${1:key} => ${2:value}]]></text>
+    <tag>:</tag>
+    <description>hash pair</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[flash[:notice] = "${1:message}"]]></text>
+    <tag>flash</tag>
+    <description>Rails: flash[:notice] = "message"</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[module ${1:module_name}
+	$0
+end]]></text>
+    <tag>module</tag>
+    <description>module ... end</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[def index
+  @${1:object_name} = ${2:ClassName}.find(:all)
+end]]></text>
+    <tag>cti</tag>
+    <description>Rails: Controller Index</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[def show
+  @${1:object_name} = ${2:ClassName}.find(params[:id])
+end]]></text>
+    <tag>cts</tag>
+    <description>Rails: Controller Show</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[def new
+  @${1:object_name} = ${2:ClassName}.new
+end
+
+def create
+  @${1} = ${2}.new(params[:${1}])
+	if @${1}.save
+	  flash[:notice] = "${2} created."
+	  redirect_to @${1}
+	else
+		flash[:error] = "${2} not created."
+		render :action => "new"
+	end
+end
+]]></text>
+    <tag>ctn</tag>
+    <description>Rails: Controller New</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[def edit
+  @${1:object_name} = ${2:ClassName}.find(params[:id])
+end
+
+def update
+  @${1} = ${2}.find_by_id(params[:id])
+  if @${1}.update_attributes(params[:${1}])
+    flash[:notice] = "${2} updated."
+    redirect_to @${1}
+  else
+  	flash[:error] = "${2} not updated."
+  	render :action => "edit"
+  end
+end
+]]></text>
+    <tag>cte</tag>
+    <description>Rails: Controller Edit</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[def destroy
+  @${1:object_name} = ${2:ClassName}.find(params[:id])
+  respond_to do |format|
+		if @${1}.destroy
+			flash[:notice] = '${2} deleted.'
+			format.html { redirect_to(${3:plural_url}) }	
+		  format.xml  { head :ok }
+	 	else
+	 		flash[:error] = '${2} not deleted.'
+			format.html { redirect_to(${3}) }	
+		  format.xml  { head :unprocessable_entity }
+		end
+  end
+end]]></text>
+    <tag>ctd</tag>
+    <description>Rails: Controller Destroy</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[validates_acceptance_of :${1:attribute_name}${0}]]></text>
+    <tag>va</tag>
+    <description>Rails: validates_acceptance_of</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[validates_associated :${1:association_name}${0}]]></text>
+    <tag>vas</tag>
+    <description>Rails: validates_associated</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[validates_confirmation_of :${1:attribute_name}${0}]]></text>
+    <tag>vc</tag>
+    <description>Rails: validates_confirmation_of</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[validates_format_of :${1:attribute_name}, :with => /${2:regexp}/${0}]]></text>
+    <tag>vf</tag>
+    <description>Rails: validates_format_of</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[validates_length_of :${1:attribute_name}, :${2:maximum|minimum|in|is} => ${3:1..5}${0}
+${0}]]></text>
+    <tag>vl</tag>
+    <description>Rails: validates_length_of</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[validates_numericality_of :${1:attribute_name}${2:, :only_integer => true}${0}]]></text>
+    <tag>vn</tag>
+    <description>Rails: validates_numericality_of</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[validates_presence_of :${1:attribute_name}${0}]]></text>
+    <tag>vp</tag>
+    <description>Rails: validates_presence_of</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[validates_uniqueness_of :${1:attribute_name}${0}]]></text>
+    <tag>vu</tag>
+    <description>Rails: validates_uniqueness_of</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[belongs_to :${1:class_name}${0}]]></text>
+    <tag>bt</tag>
+    <description>ActiveRecord: belongs_to</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[has_many :${1:class_name_plural}${0}]]></text>
+    <tag>hm</tag>
+    <description>ActiveRecord: has_many</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[has_and_belongs_to_many :${1:class_name_plural}${0}]]></text>
+    <tag>habtm</tag>
+    <description>ActiveRecord: has_and_belongs_to_many</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[has_one :${1:class_name}${0}]]></text>
+    <tag>ho</tag>
+    <description>ActiveRecord: has_one</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[def test_should_get_index
+  get :index
+  assert_response :success
+  assert_not_nil assigns(:${1:controller_name})
+end]]></text>
+    <tag>tcti</tag>
+    <description>Rails Tests (Functional): Index</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[def test_should_get_new
+  get :new
+  assert_response :success
+end
+
+def test_should_create_${1:model_name}
+  assert_difference("${2:ClassName}.count") do
+    post :create, :${1} => { :${3:params} }
+  end
+
+  assert_redirected_to ${1}_path(assigns(:${1}))
+end
+]]></text>
+    <tag>tctn</tag>
+    <description>Rails Tests (Functional): New</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[def test_should_get_edit
+  get :edit, :id => ${1:controller_name}(:${2:fixture_id}).id
+  assert_response :success
+end
+
+def test_should_update_${3:model_name}
+  put :update, :id => ${1}(:${2}).id, :${3} => { }
+  assert_redirected_to ${3}_path(assigns(:${3}))
+end]]></text>
+    <tag>tcte</tag>
+    <description>Rails Tests (Functional): Edit</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[def test_should_show_${1:model_name}
+  get :show, :id => ${2:controller_name}(:${3:fixture_id}).id
+  assert_response :success
+end]]></text>
+    <tag>tcts</tag>
+    <description>Rails Tests (Functional): Show</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[def test_should_destroy_${1:model_name}
+  assert_difference("${2:CalssName}.count", -1) do
+    delete :destroy, :id => ${3:controller_name}(:${4:fixture_id}).id
+  end
+
+  assert_redirected_to ${3}_path
+end]]></text>
+    <tag>tctd</tag>
+    <description>Rails Tests (Functional): Destroy</description>
+  </snippet>
+  <snippet override="ruby-do">
+    <text><![CDATA[do $0
+	
+end]]></text>
+    <tag>do</tag>
+    <description>do .. end</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[accepts_nested_attributes_for :${1:association_name},
+  :reject_if => proc { |attributes| attributes["${2:attribute_name}"].blank? }]]></text>
+    <tag>anaf</tag>
+    <description>Rails: accepts_nested_attributes_for</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[RAILS_DEFAULT_LOGGER.info ${0}]]></text>
+    <tag>logger</tag>
+    <description>RAILS_DEFAULT_LOGGER.info</description>
+  </snippet>
+</snippets>

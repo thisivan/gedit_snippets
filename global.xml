@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets>
+  <snippet>
+    <description>Selection: Enclose parentesis</description>
+    <text><![CDATA[(${0:$GEDIT_SELECTED_TEXT})]]></text>
+    <accelerator><![CDATA[<Shift><Alt>parenleft]]></accelerator>
+  </snippet>
+  <snippet>
+    <text><![CDATA[[${0:$GEDIT_SELECTED_TEXT}]]]></text>
+    <accelerator><![CDATA[<Shift><Alt>braceright]]></accelerator>
+    <description>Selection: Enclose brackets</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[{${0:$GEDIT_SELECTED_TEXT}}]]></text>
+    <accelerator><![CDATA[<Shift><Alt>braceleft]]></accelerator>
+    <description>Selection: Enclose keys</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<${1:tag_name}>${0:$GEDIT_SELECTED_TEXT}</${1}>]]></text>
+    <accelerator><![CDATA[<Shift><Alt>less]]></accelerator>
+    <description>Selection: Enclose tag</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA["${0:$GEDIT_SELECTED_TEXT}"]]></text>
+    <accelerator><![CDATA[<Shift><Alt>quotedbl]]></accelerator>
+    <description>Selection: Enclose double quotes</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA['${0:$GEDIT_SELECTED_TEXT}']]></text>
+    <accelerator><![CDATA[<Alt>apostrophe]]></accelerator>
+    <description>Selection: Enclose single quotes</description>
+  </snippet>
+</snippets>
