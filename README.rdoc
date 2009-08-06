@@ -1,0 +1,401 @@
+
+GEdit Snippets for Rails
+
+GEdit snippets for Ruby on Rails
+General Snippets
+Shift + ‘
+
+Enclose selected text in single quotes
+
+  '${0:$GEDIT_SELECTED_TEXT}'
+
+Shift + Alt + "
+
+Enclose selected text in double quotes
+
+  "${0:$GEDIT_SELECTED_TEXT}"
+
+Shift + Alt + (
+
+Enclose selected text in parentheses
+
+  (${0:$GEDIT_SELECTED_TEXT})
+
+Shift + Alt + {
+
+Enclose selected text in braces
+
+  {${0:$GEDIT_SELECTED_TEXT}}
+
+Shift + Alt + }
+
+Enclose selected text in square brackets
+
+  [${0:$GEDIT_SELECTED_TEXT}]
+
+Shift + ALt + <
+
+Enclose selected text in a HTML tag
+
+  <${1:div}>${0:$GEDIT_SELECTED_TEXT}</${1}>
+
+ActionView Snippets (erb)
+= + Tab
+
+erb (equals)
+
+  <%= ${0} %>
+
+% + Tab
+
+erb
+
+  <% ${0} %>
+
+: + Tab or Shift + Alt + :
+
+Generate a :symbol => value pair for hashes
+
+  :${1:symbol_name} => ${2:value}
+
+al + Tab
+
+  <%= auto_link ${1:text} %>${0}
+
+cbt + Tab
+
+check_box_tag
+
+  <%= check_box_tag :${1:name} %>${0}
+
+cf + Tab
+
+content_for
+
+  <% content_for :${1:yield_name} do %>
+    ${0}
+  <% end %>
+
+ct + Tab
+
+  <%= content_tag(:${1:tag}, ${2:content}, :class => "${3:class_name}") %>${0}
+
+ctd + Tab
+
+content_tag with &block
+
+  <% content_tag :${1:tag}, :class => "${2:class_name}" do -%>
+    ${0}
+  <% end -%>
+
+ctfd + Tab
+
+content_tag_for with &block
+
+  <% content_tag_for(:${1:tag}, @${2:object}) do -%>
+    ${0}
+  <% end -%>
+
+cs + Tab
+
+  <%= form.collection_select :${1:attribute_name}, ${2:ClassName}.all,
+      :id, :${4:description} %>${0}
+
+else + Tab
+
+else control structure (erb)
+
+  <% else -%>
+
+emf + Tab
+
+  <%= error_messages_for :${1:object_name} %>${0}
+
+end + Tab
+
+  <% end -%>
+
+et + Tab
+
+erb text with translation (118n)
+
+  <%= t("${0}") %>
+
+fdf + Tab
+
+fields_for
+
+  <% fields_for "${1:prefix}" do |${2:form}| %>
+    ${0}
+  <% end %>
+
+ff + Tab
+
+form_for
+
+  <% form_for ${1:@object_name} do |form| %>
+    ${0}
+  <% end %>
+
+fld + Tab
+
+form.label + form.text_field
+
+  <p>
+    <%= ${1:form}.label :${2:attribute_name} %><br />
+    <%= ${1}.text_field :${2} %>
+  </p>${0}
+
+fdf + Tab
+
+fields_for
+
+  <% fields_for "${1:prefix}" do |${2:form}| -%>
+    ${0}
+  <% end -%>
+
+for + Tab
+
+  for ... in
+
+  <% for ${1:element} in ${2:@elements} %>
+      ${0}
+  <% end %>
+
+hf + Tab
+
+hidden_field (FormHelper)
+
+  <%= ${1:form}.hidden_field :${2:attribute_name} %>${0}
+
+if + Tab
+
+if control structure (erb)
+
+  <% if ${1:condition} -%>
+    ${0}
+  <% end -%>
+
+it + Tab
+
+  <%= image_tag "${1:image}" %>
+
+lb + Tab
+
+label (FormHelper)
+
+  <%= ${1:form}.label :${2:attribute_name}, "${3:text}" %>${0}
+
+lbt + Tab
+
+label_tag helper
+
+  <%= label_tag :${1:label_name}, "${2:text}" %>${0}
+
+lt + Tab
+
+link_to helper
+
+  <%= link_to "${1:name}", ${2:url} %>${0}
+
+ltf + Tab
+
+link_to_function helper
+
+  <%= link_to_function "${1:label}", "${2:alert('Not jet implemented.')}" %>
+
+ltr + Tab
+
+link_to_remote helper
+
+  <%= link_to_remote "${1:name}", ${2:url} %>${0}
+
+of + Tab
+
+observe_field helper
+
+  <%= observe_form ${1::form_id},
+    ${2:url},
+    :frequency => ${3:0.5},
+    :width => "${4:q}" %>
+
+pft + Tab
+
+password_field_tag helper
+
+  <%= password_field_tag :${1:name} %>${0}
+
+rp + Tab
+
+render :partial
+
+  <%= render :partial => @${1:object_name} %>${0}
+
+slt + Tab
+
+  <%= stylesheet_link_tag "${1:file_name}", :media => :${2:all} %>${0}
+
+st + Tab
+
+  submit_tag helper
+
+  <%= submit_tag "${1:Submit}" %>${0}
+
+str + Tab
+
+submit_to_remote helper
+
+  <%= submit_to_remote :${1:buttom_name}, "${2:button_label}",
+    ${3:url} %>${0}
+
+tf + Tab
+
+text_field (FormHelper)
+
+  <%= ${1:form}.text_field :${2:attribute_name} %>${0}
+
+tft + Tab
+
+text_field_tag helper
+
+  <%= text_field_tag :${1:name} %>${0}
+
+unless + Tab
+
+unless control structure (erb)
+
+  <% unless ${1:condition} %>
+    ${0}
+  <% end %>
+
+HTML Snippets in ERB
+Shift + Alt + Space
+
+Non breaking space
+
+  &nbsp;
+
+Shift + Alt + B
+
+  <strong>${0:$GEDIT_SELECTED_TEXT}</strong>
+
+hbr + Tab or Shift + Alt + L
+
+  <br />
+
+hr + Tab or Shift + Alt + H
+
+  <hr />
+
+hol + Tab
+
+Ordered list tag
+
+  <ol>
+    <li>${0}</li>
+  </ol>
+
+hstyle
+
+  <style type="text/css" media="${1:screen}">
+    ${0}
+  </style>
+
+ht + Tab
+
+table
+
+  <table>
+    <tr>
+      <td>${0}</td>
+    </tr>
+  </table>
+
+htd + Tab
+
+table data
+
+  <td>${0}</td>
+
+hth + Tab
+
+  <th>${0}</th>
+
+htr + Tab
+
+table row
+
+  <tr>
+    <td>${0}</td>
+  </tr>
+
+hul + Tab
+
+Unordered list tag
+
+  <ul>
+    <li>${0}</li>
+  </ul>
+
+hli + Tab
+
+List item tag
+
+  <li>${0}</li>
+
+Controller Snippets (Ruby)
+cti + Tab
+
+Standard procedure for index action
+
+  def index
+    ...
+  end
+
+cts + Tab
+
+Standard procedure for show action
+
+  def show
+    ...
+  end
+
+ctn + Tab
+
+Standard procedure for new and create actions
+
+  def new
+    ...
+  end
+
+  def create
+    ...
+  end
+
+cte + Tab
+
+Standard procedure for edit and update actions
+
+  def edit
+    ...
+  end
+
+  def update
+    ...
+  end
+
+ctd + Tab
+
+Standard procedure for destroy action
+
+  Comming soon... sorry
+
+License
+
+Copyright © 2008 Innetra Consultancy Services, S.C.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
